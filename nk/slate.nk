@@ -11,7 +11,7 @@ define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
             <split size="1897" stretch="1"/>
             <splitter orientation="2">
                 <split size="768"/>
-                <dock id="" activePageId="Viewer.1">
+                <dock id="" activePageId="Viewer.2">
                     <page id="Viewer.1"/>
                     <page id="Viewer.2"/>
                 </dock>
@@ -35,7 +35,7 @@ define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
 Root {
  inputs 0
  name /Users/woong/nuke/nk/slate.nk
- frame 98
+ frame 31
  last_frame 187
  lock_range true
  format "2048 1556 0 0 2048 1556 1 2K_Super_35(full-ap)"
@@ -62,14 +62,7 @@ Read {
  xpos 68
  ypos -251
 }
-Reformat {
- type "to box"
- box_width 1280
- name Reformat1
- xpos 68
- ypos -171
- disable true
-}
+set N82ea08e0 [stack 0]
 Group {
  name Group1
  xpos 68
@@ -88,36 +81,7 @@ Group {
   colorspaceIn rec709
   name Vectorfield1
   xpos 43
-  ypos -148
- }
- Text2 {
-  font_size_toolbar 100
-  font_width_toolbar 100
-  font_height_toolbar 100
-  message lazypic
-  old_message {{108 97 122 121 112 105 99}
-    }
-  box {10 0 {width} {height-10}}
-  transforms {{0 2}
-    }
-  cursor_position 7
-  font {{ Courier 10 Pitch : Regular : Courier10Pitch.pfb : 0 }}
-  global_font_scale {{width*0.00025}}
-  center {1024 778}
-  cursor_initialised true
-  autofit_bbox false
-  initial_cursor_position {{0 1080}
-    }
-  group_animations {{0} imported: 0 selected: items: "root transform/"}
-  animation_layers {{1 11 1024 778 0 0 1 1 0 0 0 0}
-    }
-  enable_background true
-  background_opacity 0.7
-  background_border_x 20
-  background_border_y 10
-  name Text2
-  xpos 43
-  ypos -124
+  ypos -158
  }
  Text2 {
   font_size_toolbar 100
@@ -143,18 +107,46 @@ Group {
     }
   enable_background true
   background_opacity 0.7
-  background_border_x 20
+  background_border_x {{width}}
   background_border_y 10
   name Text1
   xpos 43
-  ypos -100
+  ypos -128
+ }
+ Text2 {
+  font_size_toolbar 100
+  font_width_toolbar 100
+  font_height_toolbar 100
+  message lazypic
+  old_message {{108 97 122 121 112 105 99}
+    }
+  box {10 0 {width} {height-10}}
+  transforms {{0 2}
+    }
+  cursor_position 7
+  font {{ Courier 10 Pitch : Regular : Courier10Pitch.pfb : 0 }}
+  global_font_scale {{width*0.00025}}
+  center {1024 778}
+  cursor_initialised true
+  autofit_bbox false
+  initial_cursor_position {{0 1080}
+    }
+  group_animations {{0} imported: 0 selected: items: "root transform/"}
+  animation_layers {{1 11 1024 778 0 0 1 1 0 0 0 0}
+    }
+  background_opacity 0.7
+  background_border_x 20
+  background_border_y 10
+  name Text2
+  xpos 43
+  ypos -104
  }
  Text2 {
   font_size_toolbar 100
   font_width_toolbar 100
   font_height_toolbar 100
   message "\[date %Y]-\[date %m]-\[date %d] \[date %T]"
-  old_message {{50 48 49 56 45 49 50 45 50 48 32 49 50 58 50 52 58 48 51}
+  old_message {{50 48 49 56 45 49 50 45 50 48 32 50 48 58 52 56 58 51 51}
     }
   old_expression_markers {{0 3 5 6 8 9 11 18}
     }
@@ -173,13 +165,45 @@ Group {
   group_animations {{0} imported: 0 selected: items: "root transform/"}
   animation_layers {{1 11 1024 778 0 0 1 1 0 0 0 0}
     }
-  enable_background true
   background_opacity 0.7
   background_border_x 20
   background_border_y 10
   name Text3
   xpos 43
   ypos -76
+ }
+ Text2 {
+  font_size_toolbar 100
+  font_width_toolbar 100
+  font_height_toolbar 100
+  message "\[metadata input/timecode]"
+  old_message {{50 51 58 52 55 58 53 57 58 48 54}
+    }
+  old_expression_markers {{0 10}
+    }
+  box {0 0 {width} {height}}
+  xjustify center
+  yjustify bottom
+  transforms {{0 2}
+    }
+  cursor_position 25
+  font {{ Courier 10 Pitch : Regular : Courier10Pitch.pfb : 0 }}
+  global_font_scale {{width*0.00025}}
+  center {1024 778}
+  cursor_initialised true
+  autofit_bbox false
+  initial_cursor_position {{0 1080}
+    }
+  group_animations {{0} imported: 0 selected: items: "root transform/"}
+  animation_layers {{1 11 1024 778 0 0 1 1 0 0 0 0}
+    }
+  enable_background true
+  background_opacity 0.7
+  background_border_x {{width}}
+  background_border_y 10
+  name Text6
+  xpos 43
+  ypos -52
  }
  Text2 {
   font_size_toolbar 100
@@ -203,53 +227,19 @@ Group {
   group_animations {{0} imported: 0 selected: items: "root transform/"}
   animation_layers {{1 11 1024 778 0 0 1 1 0 0 0 0}
     }
-  enable_background true
   background_opacity 0.7
   background_border_x 20
   background_border_y 10
   name Text5
   xpos 43
-  ypos -52
- }
- Text2 {
-  font_size_toolbar 100
-  font_width_toolbar 100
-  font_height_toolbar 100
-  message "\[metadata input/timecode]"
-  old_message {{50 51 58 52 56 58 48 50 58 48 49}
-    }
-  old_expression_markers {{0 10}
-    }
-  box {0 0 {width} {height}}
-  xjustify center
-  yjustify bottom
-  transforms {{0 2}
-    }
-  cursor_position 25
-  font {{ Courier 10 Pitch : Regular : Courier10Pitch.pfb : 0 }}
-  global_font_scale {{width*0.00025}}
-  center {1024 778}
-  cursor_initialised true
-  autofit_bbox false
-  initial_cursor_position {{0 1080}
-    }
-  group_animations {{0} imported: 0 selected: items: "root transform/"}
-  animation_layers {{1 11 1024 778 0 0 1 1 0 0 0 0}
-    }
-  enable_background true
-  background_opacity 0.7
-  background_border_x 20
-  background_border_y 10
-  name Text6
-  xpos 43
-  ypos -28
+  ypos -20
  }
  Text2 {
   font_size_toolbar 100
   font_width_toolbar 100
   font_height_toolbar 100
   message "\[format %06d \[frame]]"
-  old_message {{48 48 48 48 57 56}
+  old_message {{48 48 48 48 51 49}
     }
   old_expression_markers {{0 5}
     }
@@ -268,13 +258,12 @@ Group {
   group_animations {{0} imported: 0 selected: items: "root transform/"}
   animation_layers {{1 11 1024 778 0 0 1 1 0 0 0 0}
     }
-  enable_background true
   background_opacity 0.7
   background_border_x 20
   background_border_y 10
   name Text4
   xpos 43
-  ypos -4
+  ypos 10
  }
  Output {
   name Output1
@@ -282,6 +271,7 @@ Group {
   ypos 44
  }
  Viewer {
+  frame 31
   frame_range 1-187
   name Viewer1
   xpos 153
@@ -289,9 +279,18 @@ Group {
  }
 end_group
 Viewer {
- frame 98
+ frame 31
  frame_range 1-187
  name Viewer1
  xpos -220
  ypos 124
+}
+push $N82ea08e0
+Reformat {
+ type "to box"
+ box_width 1280
+ name Reformat1
+ xpos 282
+ ypos -165
+ disable true
 }
