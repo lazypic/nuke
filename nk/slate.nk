@@ -13,6 +13,7 @@ define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
                 <split size="768"/>
                 <dock id="" activePageId="Viewer.1">
                     <page id="Viewer.1"/>
+                    <page id="Viewer.2"/>
                 </dock>
                 <split size="540"/>
                 <dock id="" activePageId="DAG.1" focus="true">
@@ -59,7 +60,15 @@ Read {
  mov32_pixel_format {{0} "default (YCbCrA 32-bit 444 Float (r4fl))" "RGBA  8-bit" "RGBA  16-bit (b64a)" "YCbCrA 8-bit 444 (v408)" "YCbCrA 8-bit 444 Biased (r408)" "YCbCr  8-bit 422 (2vuy)" "YCbCrA 32-bit 444 Float (r4fl)" "YCbCr  16-bit 444 (y416)" "YCbCr  10-bit 422 (v210)" "YCbCr  16-bit 422 (v216)"}
  name Read2
  xpos 68
- ypos -250
+ ypos -251
+}
+Reformat {
+ type "to box"
+ box_width 1280
+ name Reformat1
+ xpos 68
+ ypos -171
+ disable true
 }
 Group {
  name Group1
@@ -93,7 +102,7 @@ Group {
     }
   cursor_position 7
   font {{ Courier 10 Pitch : Regular : Courier10Pitch.pfb : 0 }}
-  global_font_scale 0.5
+  global_font_scale {{width*0.00025}}
   center {1024 778}
   cursor_initialised true
   autofit_bbox false
@@ -123,7 +132,7 @@ Group {
     }
   cursor_position 8
   font {{ Courier 10 Pitch : Regular : Courier10Pitch.pfb : 0 }}
-  global_font_scale 0.5
+  global_font_scale {{width*0.00025}}
   center {1024 778}
   cursor_initialised true
   autofit_bbox false
@@ -145,7 +154,7 @@ Group {
   font_width_toolbar 100
   font_height_toolbar 100
   message "\[date %Y]-\[date %m]-\[date %d] \[date %T]"
-  old_message {{50 48 49 56 45 49 50 45 50 48 32 49 50 58 49 54 58 53 55}
+  old_message {{50 48 49 56 45 49 50 45 50 48 32 49 50 58 50 52 58 48 51}
     }
   old_expression_markers {{0 3 5 6 8 9 11 18}
     }
@@ -155,7 +164,7 @@ Group {
     }
   cursor_position 39
   font {{ Courier 10 Pitch : Regular : Courier10Pitch.pfb : 0 }}
-  global_font_scale 0.5
+  global_font_scale {{width*0.00025}}
   center {1024 778}
   cursor_initialised true
   autofit_bbox false
@@ -185,7 +194,7 @@ Group {
     }
   cursor_position 17
   font {{ Courier 10 Pitch : Regular : Courier10Pitch.pfb : 0 }}
-  global_font_scale 0.5
+  global_font_scale {{width*0.00025}}
   center {1024 778}
   cursor_initialised true
   autofit_bbox false
@@ -218,7 +227,7 @@ Group {
     }
   cursor_position 25
   font {{ Courier 10 Pitch : Regular : Courier10Pitch.pfb : 0 }}
-  global_font_scale 0.5
+  global_font_scale {{width*0.00025}}
   center {1024 778}
   cursor_initialised true
   autofit_bbox false
@@ -249,9 +258,8 @@ Group {
   yjustify bottom
   transforms {{0 2}
     }
-  cursor_position 21
   font {{ Courier 10 Pitch : Regular : Courier10Pitch.pfb : 0 }}
-  global_font_scale 0.5
+  global_font_scale {{width*0.00025}}
   center {1024 778}
   cursor_initialised true
   autofit_bbox false
@@ -271,7 +279,13 @@ Group {
  Output {
   name Output1
   xpos 43
-  ypos 96
+  ypos 44
+ }
+ Viewer {
+  frame_range 1-187
+  name Viewer1
+  xpos 153
+  ypos -28
  }
 end_group
 Viewer {
