@@ -2,7 +2,7 @@
 version 11.1 v4
 define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
 <layout version="1.0">
-    <window x="0" y="23" w="2560" h="1333" screen="0">
+    <window x="0" y="23" w="2560" h="1338" screen="0">
         <splitter orientation="1">
             <split size="40"/>
             <dock id="" hideTitles="1" activePageId="Toolbar.1">
@@ -10,17 +10,16 @@ define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
             </dock>
             <split size="1897" stretch="1"/>
             <splitter orientation="2">
-                <split size="768"/>
-                <dock id="" activePageId="Viewer.2">
+                <split size="771"/>
+                <dock id="" activePageId="Viewer.1">
                     <page id="Viewer.1"/>
                     <page id="Viewer.2"/>
                 </dock>
-                <split size="540"/>
+                <split size="542"/>
                 <dock id="" activePageId="DAG.1" focus="true">
                     <page id="DAG.1"/>
                     <page id="Curve Editor.1"/>
                     <page id="DopeSheet.1"/>
-                    <page id="DAG.2"/>
                 </dock>
             </splitter>
             <split size="615"/>
@@ -35,7 +34,7 @@ define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
 Root {
  inputs 0
  name /Users/woong/nuke/nk/slate.nk
- frame 31
+ frame 35
  last_frame 187
  lock_range true
  format "2048 1556 0 0 2048 1556 1 2K_Super_35(full-ap)"
@@ -63,8 +62,18 @@ Read {
  ypos -251
 }
 set N82ea08e0 [stack 0]
+Reformat {
+ type "to box"
+ box_width 1280
+ name Reformat1
+ xpos 282
+ ypos -165
+ disable true
+}
+push $N82ea08e0
 Group {
  name Group1
+ selected true
  xpos 68
  ypos -68
 }
@@ -109,7 +118,7 @@ Group {
   background_opacity 0.7
   background_border_x {{width}}
   background_border_y 10
-  name Text1
+  name shotname
   xpos 43
   ypos -128
  }
@@ -117,13 +126,13 @@ Group {
   font_size_toolbar 100
   font_width_toolbar 100
   font_height_toolbar 100
-  message lazypic
-  old_message {{108 97 122 121 112 105 99}
+  message "lazypic | circle"
+  old_message {{108 97 122 121 112 105 99 32 124 32 99 105 114 99 108 101}
     }
   box {10 0 {width} {height-10}}
   transforms {{0 2}
     }
-  cursor_position 7
+  cursor_position 10
   font {{ Courier 10 Pitch : Regular : Courier10Pitch.pfb : 0 }}
   global_font_scale {{width*0.00025}}
   center {1024 778}
@@ -137,7 +146,7 @@ Group {
   background_opacity 0.7
   background_border_x 20
   background_border_y 10
-  name Text2
+  name vender_project
   xpos 43
   ypos -104
  }
@@ -146,7 +155,7 @@ Group {
   font_width_toolbar 100
   font_height_toolbar 100
   message "\[date %Y]-\[date %m]-\[date %d] \[date %T]"
-  old_message {{50 48 49 56 45 49 50 45 50 48 32 50 48 58 52 56 58 51 51}
+  old_message {{50 48 49 56 45 49 50 45 50 48 32 50 51 58 49 52 58 48 56}
     }
   old_expression_markers {{0 3 5 6 8 9 11 18}
     }
@@ -168,7 +177,7 @@ Group {
   background_opacity 0.7
   background_border_x 20
   background_border_y 10
-  name Text3
+  name time
   xpos 43
   ypos -76
  }
@@ -176,17 +185,15 @@ Group {
   font_size_toolbar 100
   font_width_toolbar 100
   font_height_toolbar 100
-  message "\[metadata input/timecode]"
-  old_message {{50 51 58 52 55 58 53 57 58 48 54}
-    }
-  old_expression_markers {{0 10}
+  message memo
+  old_message {{109 101 109 111}
     }
   box {0 0 {width} {height}}
   xjustify center
   yjustify bottom
   transforms {{0 2}
     }
-  cursor_position 25
+  cursor_position 4
   font {{ Courier 10 Pitch : Regular : Courier10Pitch.pfb : 0 }}
   global_font_scale {{width*0.00025}}
   center {1024 778}
@@ -201,7 +208,7 @@ Group {
   background_opacity 0.7
   background_border_x {{width}}
   background_border_y 10
-  name Text6
+  name timecode
   xpos 43
   ypos -52
  }
@@ -209,14 +216,14 @@ Group {
   font_size_toolbar 100
   font_width_toolbar 100
   font_height_toolbar 100
-  message "circle comp woong"
-  old_message {{99 105 114 99 108 101 32 99 111 109 112 32 119 111 111 110 103}
+  message "woong comp v001"
+  old_message {{119 111 111 110 103 32 99 111 109 112 32 118 48 48 49}
     }
   box {10 0 {width} {height}}
   yjustify bottom
   transforms {{0 2}
     }
-  cursor_position 17
+  cursor_position 15
   font {{ Courier 10 Pitch : Regular : Courier10Pitch.pfb : 0 }}
   global_font_scale {{width*0.00025}}
   center {1024 778}
@@ -230,7 +237,7 @@ Group {
   background_opacity 0.7
   background_border_x 20
   background_border_y 10
-  name Text5
+  name artist_task_version
   xpos 43
   ypos -20
  }
@@ -238,16 +245,17 @@ Group {
   font_size_toolbar 100
   font_width_toolbar 100
   font_height_toolbar 100
-  message "\[format %06d \[frame]]"
-  old_message {{48 48 48 48 51 49}
+  message "\[metadata input/timecode] \[format %06d \[frame]]"
+  old_message {{50 51 58 52 55 58 53 57 58 49 48 32 48 48 48 48 51 53}
     }
-  old_expression_markers {{0 5}
+  old_expression_markers {{0 10 12 17}
     }
   box {0 0 {width-10} {height}}
   xjustify right
   yjustify bottom
   transforms {{0 2}
     }
+  cursor_position 26
   font {{ Courier 10 Pitch : Regular : Courier10Pitch.pfb : 0 }}
   global_font_scale {{width*0.00025}}
   center {1024 778}
@@ -261,7 +269,7 @@ Group {
   background_opacity 0.7
   background_border_x 20
   background_border_y 10
-  name Text4
+  name frame
   xpos 43
   ypos 10
  }
@@ -271,7 +279,7 @@ Group {
   ypos 44
  }
  Viewer {
-  frame 31
+  frame 35
   frame_range 1-187
   name Viewer1
   xpos 153
@@ -279,18 +287,9 @@ Group {
  }
 end_group
 Viewer {
- frame 31
+ frame 35
  frame_range 1-187
  name Viewer1
  xpos -220
  ypos 124
-}
-push $N82ea08e0
-Reformat {
- type "to box"
- box_width 1280
- name Reformat1
- xpos 282
- ypos -165
- disable true
 }
