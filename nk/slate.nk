@@ -19,6 +19,7 @@ define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
                     <page id="DAG.1"/>
                     <page id="Curve Editor.1"/>
                     <page id="DopeSheet.1"/>
+                    <page id="DAG.2"/>
                 </dock>
             </splitter>
             <split size="615"/>
@@ -33,7 +34,7 @@ define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
 Root {
  inputs 0
  name /Users/woong/nuke/nk/slate.nk
- frame 76
+ frame 98
  last_frame 187
  lock_range true
  format "2048 1556 0 0 2048 1556 1 2K_Super_35(full-ap)"
@@ -60,190 +61,221 @@ Read {
  xpos 68
  ypos -250
 }
-Vectorfield {
- vfield_file /Users/woong/nuke/luts/BMD_PC_EE_FILM_V2.cube
- version 1
- file_type cube
- colorspaceIn rec709
- name Vectorfield1
+Group {
+ name Group1
  xpos 68
- ypos -139
+ ypos -68
 }
-set N84372590 [stack 0]
-Text2 {
- font_size_toolbar 100
- font_width_toolbar 100
- font_height_toolbar 100
- message lazypic
- old_message {{108 97 122 121 112 105 99}
-   }
- box {0 0 {width} {height}}
- transforms {{0 2}
-   }
- font {{ Courier 10 Pitch : Regular : Courier10Pitch.pfb : 0 }}
- global_font_scale 0.5
- center {1024 778}
- cursor_initialised true
- autofit_bbox false
- initial_cursor_position {{0 1080}
-   }
- group_animations {{0} imported: 0 selected: items: "root transform/"}
- animation_layers {{1 11 1024 778 0 0 1 1 0 0 0 0}
-   }
- enable_background true
- background_opacity 0.7
- name Text2
- xpos 68
- ypos -115
-}
-Text2 {
- font_size_toolbar 100
- font_width_toolbar 100
- font_height_toolbar 100
- message "FOO 0010"
- old_message {{70 79 79 32 48 48 49 48}
-   }
- box {0 0 {width} {height}}
- xjustify center
- transforms {{0 2}
-   }
- font {{ Courier 10 Pitch : Regular : Courier10Pitch.pfb : 0 }}
- global_font_scale 0.5
- center {1024 778}
- cursor_initialised true
- autofit_bbox false
- initial_cursor_position {{0 1080}
-   }
- group_animations {{0} imported: 0 selected: items: "root transform/"}
- animation_layers {{1 11 1024 778 0 0 1 1 0 0 0 0}
-   }
- enable_background true
- background_opacity 0.7
- name Text1
- xpos 68
- ypos -91
-}
-Text2 {
- font_size_toolbar 100
- font_width_toolbar 100
- font_height_toolbar 100
- message "\[date %Y]-\[date %m]-\[date %d] \[date %T]"
- old_message {{50 48 49 56 45 49 50 45 50 48 32 49 49 58 53 55 58 53 56}
-   }
- old_expression_markers {{0 3 5 6 8 9 11 18}
-   }
- box {0 0 {width} {height}}
- xjustify right
- transforms {{0 2}
-   }
- font {{ Courier 10 Pitch : Regular : Courier10Pitch.pfb : 0 }}
- global_font_scale 0.5
- center {1024 778}
- cursor_initialised true
- autofit_bbox false
- initial_cursor_position {{0 1080}
-   }
- group_animations {{0} imported: 0 selected: items: "root transform/"}
- animation_layers {{1 11 1024 778 0 0 1 1 0 0 0 0}
-   }
- enable_background true
- background_opacity 0.7
- background_border_y 0
- name Text3
- xpos 68
- ypos -67
-}
-Text2 {
- font_size_toolbar 100
- font_width_toolbar 100
- font_height_toolbar 100
- message "circle comp woong"
- old_message {{99 105 114 99 108 101 32 99 111 109 112 32 119 111 111 110 103}
-   }
- box {0 0 {width} {height}}
- yjustify bottom
- transforms {{0 2}
-   }
- font {{ Courier 10 Pitch : Regular : Courier10Pitch.pfb : 0 }}
- global_font_scale 0.5
- center {1024 778}
- cursor_initialised true
- autofit_bbox false
- initial_cursor_position {{0 1080}
-   }
- group_animations {{0} imported: 0 selected: items: "root transform/"}
- animation_layers {{1 11 1024 778 0 0 1 1 0 0 0 0}
-   }
- enable_background true
- background_opacity 0.7
- name Text5
- xpos 68
- ypos -43
-}
-Text2 {
- font_size_toolbar 100
- font_width_toolbar 100
- font_height_toolbar 100
- message "\[metadata input/timecode]"
- old_message {{50 51 58 52 56 58 48 53 58 49 56}
-   }
- old_expression_markers {{0 10}
-   }
- box {0 0 {width} {height}}
- xjustify center
- yjustify bottom
- transforms {{0 2}
-   }
- font {{ Courier 10 Pitch : Regular : Courier10Pitch.pfb : 0 }}
- global_font_scale 0.5
- center {1024 778}
- cursor_initialised true
- autofit_bbox false
- initial_cursor_position {{0 1080}
-   }
- group_animations {{0} imported: 0 selected: items: "root transform/"}
- animation_layers {{1 11 1024 778 0 0 1 1 0 0 0 0}
-   }
- enable_background true
- background_opacity 0.7
- name Text6
- xpos 68
- ypos -19
-}
-Text2 {
- font_size_toolbar 100
- font_width_toolbar 100
- font_height_toolbar 100
- message "\[format %06d \[frame]]"
- old_message {{48 48 48 48 55 54}
-   }
- old_expression_markers {{0 5}
-   }
- box {0 0 {width} {height}}
- xjustify right
- yjustify bottom
- transforms {{0 2}
-   }
- font {{ Courier 10 Pitch : Regular : Courier10Pitch.pfb : 0 }}
- global_font_scale 0.5
- center {1024 778}
- cursor_initialised true
- autofit_bbox false
- initial_cursor_position {{0 1080}
-   }
- group_animations {{0} imported: 0 selected: items: "root transform/"}
- animation_layers {{1 11 1024 778 0 0 1 1 0 0 0 0}
-   }
- enable_background true
- background_opacity 0.7
- background_border_y 0
- name Text4
- xpos 68
- ypos 5
-}
-push $N84372590
+ Input {
+  inputs 0
+  name Input1
+  xpos 43
+  ypos -188
+ }
+ Vectorfield {
+  vfield_file /Users/woong/nuke/luts/BMD_PC_EE_FILM_V2.cube
+  version 2
+  file_type cube
+  colorspaceIn rec709
+  name Vectorfield1
+  xpos 43
+  ypos -148
+ }
+ Text2 {
+  font_size_toolbar 100
+  font_width_toolbar 100
+  font_height_toolbar 100
+  message lazypic
+  old_message {{108 97 122 121 112 105 99}
+    }
+  box {10 0 {width} {height-10}}
+  transforms {{0 2}
+    }
+  cursor_position 7
+  font {{ Courier 10 Pitch : Regular : Courier10Pitch.pfb : 0 }}
+  global_font_scale 0.5
+  center {1024 778}
+  cursor_initialised true
+  autofit_bbox false
+  initial_cursor_position {{0 1080}
+    }
+  group_animations {{0} imported: 0 selected: items: "root transform/"}
+  animation_layers {{1 11 1024 778 0 0 1 1 0 0 0 0}
+    }
+  enable_background true
+  background_opacity 0.7
+  background_border_x 20
+  background_border_y 10
+  name Text2
+  xpos 43
+  ypos -124
+ }
+ Text2 {
+  font_size_toolbar 100
+  font_width_toolbar 100
+  font_height_toolbar 100
+  message "FOO 0010"
+  old_message {{70 79 79 32 48 48 49 48}
+    }
+  box {0 0 {width} {height-10}}
+  xjustify center
+  transforms {{0 2}
+    }
+  cursor_position 8
+  font {{ Courier 10 Pitch : Regular : Courier10Pitch.pfb : 0 }}
+  global_font_scale 0.5
+  center {1024 778}
+  cursor_initialised true
+  autofit_bbox false
+  initial_cursor_position {{0 1080}
+    }
+  group_animations {{0} imported: 0 selected: items: "root transform/"}
+  animation_layers {{1 11 1024 778 0 0 1 1 0 0 0 0}
+    }
+  enable_background true
+  background_opacity 0.7
+  background_border_x 20
+  background_border_y 10
+  name Text1
+  xpos 43
+  ypos -100
+ }
+ Text2 {
+  font_size_toolbar 100
+  font_width_toolbar 100
+  font_height_toolbar 100
+  message "\[date %Y]-\[date %m]-\[date %d] \[date %T]"
+  old_message {{50 48 49 56 45 49 50 45 50 48 32 49 50 58 49 54 58 53 55}
+    }
+  old_expression_markers {{0 3 5 6 8 9 11 18}
+    }
+  box {0 0 {width-10} {height-10}}
+  xjustify right
+  transforms {{0 2}
+    }
+  cursor_position 39
+  font {{ Courier 10 Pitch : Regular : Courier10Pitch.pfb : 0 }}
+  global_font_scale 0.5
+  center {1024 778}
+  cursor_initialised true
+  autofit_bbox false
+  initial_cursor_position {{0 1080}
+    }
+  group_animations {{0} imported: 0 selected: items: "root transform/"}
+  animation_layers {{1 11 1024 778 0 0 1 1 0 0 0 0}
+    }
+  enable_background true
+  background_opacity 0.7
+  background_border_x 20
+  background_border_y 10
+  name Text3
+  xpos 43
+  ypos -76
+ }
+ Text2 {
+  font_size_toolbar 100
+  font_width_toolbar 100
+  font_height_toolbar 100
+  message "circle comp woong"
+  old_message {{99 105 114 99 108 101 32 99 111 109 112 32 119 111 111 110 103}
+    }
+  box {10 0 {width} {height}}
+  yjustify bottom
+  transforms {{0 2}
+    }
+  cursor_position 17
+  font {{ Courier 10 Pitch : Regular : Courier10Pitch.pfb : 0 }}
+  global_font_scale 0.5
+  center {1024 778}
+  cursor_initialised true
+  autofit_bbox false
+  initial_cursor_position {{0 1080}
+    }
+  group_animations {{0} imported: 0 selected: items: "root transform/"}
+  animation_layers {{1 11 1024 778 0 0 1 1 0 0 0 0}
+    }
+  enable_background true
+  background_opacity 0.7
+  background_border_x 20
+  background_border_y 10
+  name Text5
+  xpos 43
+  ypos -52
+ }
+ Text2 {
+  font_size_toolbar 100
+  font_width_toolbar 100
+  font_height_toolbar 100
+  message "\[metadata input/timecode]"
+  old_message {{50 51 58 52 56 58 48 50 58 48 49}
+    }
+  old_expression_markers {{0 10}
+    }
+  box {0 0 {width} {height}}
+  xjustify center
+  yjustify bottom
+  transforms {{0 2}
+    }
+  cursor_position 25
+  font {{ Courier 10 Pitch : Regular : Courier10Pitch.pfb : 0 }}
+  global_font_scale 0.5
+  center {1024 778}
+  cursor_initialised true
+  autofit_bbox false
+  initial_cursor_position {{0 1080}
+    }
+  group_animations {{0} imported: 0 selected: items: "root transform/"}
+  animation_layers {{1 11 1024 778 0 0 1 1 0 0 0 0}
+    }
+  enable_background true
+  background_opacity 0.7
+  background_border_x 20
+  background_border_y 10
+  name Text6
+  xpos 43
+  ypos -28
+ }
+ Text2 {
+  font_size_toolbar 100
+  font_width_toolbar 100
+  font_height_toolbar 100
+  message "\[format %06d \[frame]]"
+  old_message {{48 48 48 48 57 56}
+    }
+  old_expression_markers {{0 5}
+    }
+  box {0 0 {width-10} {height}}
+  xjustify right
+  yjustify bottom
+  transforms {{0 2}
+    }
+  cursor_position 21
+  font {{ Courier 10 Pitch : Regular : Courier10Pitch.pfb : 0 }}
+  global_font_scale 0.5
+  center {1024 778}
+  cursor_initialised true
+  autofit_bbox false
+  initial_cursor_position {{0 1080}
+    }
+  group_animations {{0} imported: 0 selected: items: "root transform/"}
+  animation_layers {{1 11 1024 778 0 0 1 1 0 0 0 0}
+    }
+  enable_background true
+  background_opacity 0.7
+  background_border_x 20
+  background_border_y 10
+  name Text4
+  xpos 43
+  ypos -4
+ }
+ Output {
+  name Output1
+  xpos 43
+  ypos 96
+ }
+end_group
 Viewer {
- frame 76
+ frame 98
  frame_range 1-187
  name Viewer1
  xpos -220
