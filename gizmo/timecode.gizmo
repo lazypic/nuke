@@ -1,0 +1,48 @@
+#! /Applications/Nuke11.1v4/Nuke11.1v4.app/Contents/MacOS/libnuke-11.1.4.dylib -nx
+version 11.1 v4
+Gizmo {
+}
+ Input {
+  inputs 0
+  name Input1
+  xpos 43
+  ypos -236
+ }
+ Text2 {
+  font_size_toolbar 100
+  font_width_toolbar 100
+  font_height_toolbar 100
+  message "\[metadata input/timecode]"
+  old_message {{50 51 58 52 55 58 53 56 58 50 49}
+    }
+  old_expression_markers {{0 10}
+    }
+  box {0 {height*0.05} {width} {height}}
+  xjustify center
+  yjustify bottom
+  transforms {{0 2}
+    }
+  cursor_position 25
+  font {{ Courier 10 Pitch : Regular : Courier10Pitch.pfb : 0 }}
+  global_font_scale {{width*0.00035}}
+  center {1024 778}
+  cursor_initialised true
+  autofit_bbox false
+  initial_cursor_position {{0 1080}
+    }
+  group_animations {{0} imported: 0 selected: items: "root transform/"}
+  animation_layers {{1 11 1024 778 0 0 1 1 0 0 0 0}
+    }
+  enable_background true
+  background_opacity 0.7
+  background_border_y 8
+  name bottom_right
+  xpos 43
+  ypos -139
+ }
+ Output {
+  name Output1
+  xpos 43
+  ypos 4
+ }
+end_group
