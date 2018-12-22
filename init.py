@@ -5,7 +5,7 @@ import nuke
 nuke.pluginAddPath("./gizmo", addToSysPath=True)
 nuke.pluginAddPath("./image", addToSysPath=True)
 nuke.pluginAddPath("./lib", addToSysPath=True)
-nuke.pluginAddPath("./script", addToSysPath=True)
+nuke.pluginAddPath("./scripts", addToSysPath=True)
 
 nukePath = os.environ['NUKE_PATH']
 nuke.ViewerProcess.register("AlexaV3LogC", nuke.createNode, ( "Vectorfield", "vfield_file %s/luts/AlexaV3_K1S1_LogC2Video_Rec709_EE_nuke3d.cube colorspaceIn AlexaV3LogC" % (nukePath)))

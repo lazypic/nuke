@@ -9,6 +9,9 @@ mb.addCommand("Clip Library", "nukescripts.start('https://www.youtube.com/channe
 mb.addCommand("Youtube", "nukescripts.start('https://www.youtube.com/channel/UCHsxW9hros1VlKKd4HAvG8A')")
 mb.addCommand("-","","")
 mb.addCommand("OpenFile", "openfile.openfile()", "F8", shortcutContext=2)
+mb.addCommand("-","","")
+mb.addCommand("StartPerformanceTimers", "nuke.startPerformanceTimers()")
+mb.addCommand("StopPerformanceTimers", "nuke.stopPerformanceTimers()")
 
 # Gizmo
 tb = nuke.toolbar("Nodes")
@@ -16,3 +19,8 @@ m = tb.addMenu("Lazypic", icon="lazypic_logo.png")
 m.addMenu("Draw")
 m.addCommand("Draw/Slate", "nuke.createNode('slate')")
 m.addCommand("Draw/Timecode", "nuke.createNode('timecode')")
+
+## Format
+nuke.addFormat("24 24 nukeIcon")
+nuke.addFormat("360 360 kakaoEmoticon")
+
