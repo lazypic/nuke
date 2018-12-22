@@ -10,8 +10,8 @@ def openfile():
 		nuke.message("노드를 하나만 선택해주세요.")
 		return
 	for knob in focusKnobs:
-		if knob in node[0].knobs():
-			path = node[0][knob].value()
+		if knob in nodes[0].knobs():
+			path = nodes[0][knob].value()
 			if path == "":
 				nuke.message("경로가 비어있습니다.")
 				return
