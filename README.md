@@ -1,1 +1,3 @@
 # nuke
+
+lazypic nuke setting.
