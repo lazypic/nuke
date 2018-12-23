@@ -19,6 +19,8 @@ m = tb.addMenu("Lazypic", icon="lazypic_logo.png")
 m.addMenu("Draw")
 m.addCommand("Draw/Slate", "nuke.createNode('slate')")
 m.addCommand("Draw/Timecode", "nuke.createNode('timecode')")
+m.addMenu("Color")
+m.addCommand("Color/mmColorTarget", "nuke.createNode('mmColorTarget')", icon="mmColorTarget.png")
 
 ## Format
 nuke.addFormat("24 24 nukeIcon")

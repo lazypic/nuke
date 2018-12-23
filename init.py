@@ -1,6 +1,14 @@
 #coding:utf8
 import os
 import nuke
+import site
+
+if sys.platform == "darwin":
+	# brew path
+	sitePath = "/usr/local/Cellar/python/2.7.13/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages"
+	if os.path.exists(sitePath+"/"+"numpy"):
+		site.addsitedir(sitePath)
+		import numpy
 
 nuke.pluginAddPath("./gizmo", addToSysPath=True)
 nuke.pluginAddPath("./image", addToSysPath=True)
