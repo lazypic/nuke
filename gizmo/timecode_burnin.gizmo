@@ -1,19 +1,19 @@
-#! /Applications/Nuke11.1v4/Nuke11.1v4.app/Contents/MacOS/libnuke-11.1.4.dylib -nx
-version 11.1 v4
+#! /home/penguin/Nuke11.3v1/libnuke-11.3.1.so -nx
+version 11.3 v1
 Gizmo {
 }
  Input {
   inputs 0
   name Input1
-  xpos 43
-  ypos -236
+  xpos 264
+  ypos -38
  }
  Text2 {
   font_size_toolbar 100
   font_width_toolbar 100
   font_height_toolbar 100
   message "\[metadata input/timecode]"
-  old_message {{50 51 58 52 55 58 53 56 58 50 49}
+  old_message {{48 48 58 53 57 58 53 53 58 50 49}
     }
   old_expression_markers {{0 10}
     }
@@ -23,7 +23,7 @@ Gizmo {
   transforms {{0 2}
     }
   cursor_position 25
-  font {{ Courier 10 Pitch : Regular : Courier10Pitch.pfb : 0 }}
+  font {{ Liberation Mono : Regular : liberation/LiberationMono-Regular.ttf : 0 }}
   global_font_scale {{width*0.00035}}
   center {1024 778}
   cursor_initialised true
@@ -37,12 +37,12 @@ Gizmo {
   background_opacity 0.7
   background_border_y 8
   name bottom_right
-  xpos 43
-  ypos -139
+  xpos 264
+  ypos 25
  }
  Output {
   name Output1
-  xpos 43
-  ypos 4
+  xpos 264
+  ypos 102
  }
 end_group

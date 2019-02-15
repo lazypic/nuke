@@ -18,7 +18,7 @@ tb = nuke.toolbar("Nodes")
 m = tb.addMenu("Lazypic", icon="lazypic_logo.png")
 m.addMenu("Draw")
 m.addCommand("Draw/Slate", "nuke.createNode('slate')")
-m.addCommand("Draw/Timecode", "nuke.createNode('timecode')")
+m.addCommand("Draw/Timecode_burnin", "nuke.createNode('timecode_burnin')")
 m.addMenu("Color")
 m.addCommand("Color/mmColorTarget", "nuke.createNode('mmColorTarget')", icon="mmColorTarget.png")
 
