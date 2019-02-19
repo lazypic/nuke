@@ -1,5 +1,4 @@
 #coding:utf8
-import nuke
 import os
 from PySide2.QtWidgets import *
 
@@ -13,7 +12,7 @@ def main():
 	layout = QVBoxLayout()
 	envs = ["USER","OCIO","NUKE_PATH","NUKE_FONT_PATH"]
 	for e in envs:
-		layout.addWidget(QLabel("$%s : %s" % (e, os.environ[e])))
+		layout.addWidget(QLabel("$%s : %s" % (e, os.environ.get(e,""))))
 	customApp.setLayout(layout)
 	try:
 		customApp.show()
