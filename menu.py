@@ -1,6 +1,7 @@
 import nukescripts
 import openfile
 import checkenv
+import makewrite
 
 # Addon Menu
 mb = menubar.addMenu("Lazypic")
@@ -15,6 +16,7 @@ mb.addCommand("StartPerformanceTimers", "nuke.startPerformanceTimers()")
 mb.addCommand("StopPerformanceTimers", "nuke.stopPerformanceTimers()")
 mb.addCommand("-","","")
 mb.addCommand("CheckEnv", "reload(checkenv);checkenv.main()")
+mb.addCommand("MakeWrite", "reload(makewrite);makewrite.main()", "F10", shortcutContext=2)
 
 # Gizmo
 tb = nuke.toolbar("Nodes")
