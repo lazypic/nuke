@@ -26,6 +26,7 @@ m = tb.addMenu("Lazypic", icon="lazypic_logo.png")
 m.addMenu("Draw")
 m.addCommand("Draw/Slate", "nuke.createNode('slate')")
 m.addCommand("Draw/Timecode_burnin", "nuke.createNode('timecode_burnin')")
+m.addCommand("Draw/Kakao_Emoticon", "nuke.createNode('kakaoemoticon')")
 m.addMenu("Color")
 m.addCommand("Color/mmColorTarget", "nuke.createNode('mmColorTarget')", icon="mmColorTarget.png")
 
