@@ -1,0 +1,805 @@
+#! /Applications/Nuke11.1v4/Nuke11.1v4.app/Contents/MacOS/libnuke-11.1.4.dylib -nx
+version 11.1 v4
+Gizmo {
+ inputs 0
+ addUserKnob {20 User}
+ addUserKnob {26 test l "" +STARTLINE T "Kakao Emoticon Template v0.1"}
+ addUserKnob {4 bgcolor l bg M {blue grey white "" "" "" "" ""}}
+ addUserKnob {6 premult -STARTLINE}
+ premult true
+ addUserKnob {2 path l directory}
+ path /project/mon/asset/icon/
+ addUserKnob {26 "" +STARTLINE}
+ addUserKnob {1 icon01 l 01}
+ icon01 dance.png
+ addUserKnob {1 icon02 l 02 -STARTLINE}
+ icon02 dangrang.gif
+ addUserKnob {1 icon03 l 03 -STARTLINE}
+ icon03 bomb.png
+ addUserKnob {1 icon04 l 04 -STARTLINE}
+ icon04 coffee.png
+ addUserKnob {1 icon05 l 05}
+ icon05 dogmad.gif
+ addUserKnob {1 icon06 l 06 -STARTLINE}
+ icon06 dontwanner.png
+ addUserKnob {1 icon07 l 07 -STARTLINE}
+ icon07 drink.png
+ addUserKnob {1 icon08 l 08 -STARTLINE}
+ icon08 ego.png
+ addUserKnob {1 icon09 l 09}
+ icon09 endwork.png
+ addUserKnob {1 icon10 l 10 -STARTLINE}
+ icon10 full.gif
+ addUserKnob {1 icon11 l 11 -STARTLINE}
+ icon11 hear.png
+ addUserKnob {1 icon12 l 12 -STARTLINE}
+ icon12 hui.png
+ addUserKnob {1 icon13 l 13}
+ icon13 jump.png
+ addUserKnob {1 icon14 l 14 -STARTLINE}
+ icon14 monday.png
+ addUserKnob {1 icon15 l 15 -STARTLINE}
+ icon15 nono.png
+ addUserKnob {1 icon16 l 16 -STARTLINE}
+ icon16 practice.png
+ addUserKnob {1 icon17 l 17}
+ icon17 round.png
+ addUserKnob {1 icon18 l 18 -STARTLINE}
+ icon18 run.png
+ addUserKnob {1 icon19 l 19 -STARTLINE}
+ icon19 sleep.png
+ addUserKnob {1 icon20 l 20 -STARTLINE}
+ icon20 subway.png
+ addUserKnob {1 icon21 l 21}
+ icon21 tang.png
+ addUserKnob {1 icon22 l 22 -STARTLINE}
+ icon22 why.png
+ addUserKnob {1 icon23 l 23 -STARTLINE}
+ icon23 yagun.png
+ addUserKnob {1 icon24 l 24 -STARTLINE}
+ icon24 blue.png
+}
+ Read {
+  inputs 0
+  file "\[value path]\[value icon21]"
+  format "360 360 0 0 360 360 1 kakaoEmoticon"
+  origset true
+  premultiplied {{premult}}
+  name icon21
+  xpos -908
+  ypos -273
+ }
+ Reformat {
+  type "to box"
+  box_width 360
+  box_height 360
+  box_fixed true
+  resize distort
+  name Reformat21
+  xpos -908
+  ypos -193
+ }
+ Transform {
+  center {180 180}
+  name Transform24
+  xpos -908
+  ypos -141
+ }
+ Read {
+  inputs 0
+  file "\[value path]\[value icon22]"
+  format "360 360 0 0 360 360 1 kakaoEmoticon"
+  origset true
+  premultiplied {{premult}}
+  name icon22
+  xpos -798
+  ypos -273
+ }
+ Reformat {
+  type "to box"
+  box_width 360
+  box_height 360
+  box_fixed true
+  resize distort
+  name Reformat22
+  xpos -798
+  ypos -193
+ }
+ Transform {
+  translate {360 0}
+  center {180 180}
+  name Transform23
+  xpos -798
+  ypos -140
+ }
+ Read {
+  inputs 0
+  file "\[value path]\[value icon23]"
+  format "360 360 0 0 360 360 1 kakaoEmoticon"
+  origset true
+  premultiplied {{premult}}
+  name icon23
+  xpos -684
+  ypos -271
+ }
+ Reformat {
+  type "to box"
+  box_width 360
+  box_height 360
+  box_fixed true
+  resize distort
+  name Reformat23
+  xpos -684
+  ypos -191
+ }
+ Transform {
+  translate {720 0}
+  center {180 180}
+  name Transform22
+  xpos -684
+  ypos -141
+ }
+push 0
+ Read {
+  inputs 0
+  file "\[value path]\[value icon24]"
+  format "360 360 0 0 360 360 1 kakaoEmoticon"
+  origset true
+  premultiplied {{premult}}
+  name icon24
+  xpos -578
+  ypos -273
+ }
+ Reformat {
+  type "to box"
+  box_width 360
+  box_height 360
+  box_fixed true
+  resize distort
+  name Reformat24
+  xpos -578
+  ypos -193
+ }
+ Transform {
+  translate {1080 0}
+  center {180 180}
+  name Transform21
+  xpos -578
+  ypos -143
+ }
+ Read {
+  inputs 0
+  file "\[value path]\[value icon17]"
+  format "360 360 0 0 360 360 1 kakaoEmoticon"
+  origset true
+  premultiplied {{premult}}
+  name icon17
+  xpos -902
+  ypos -470
+ }
+ Reformat {
+  type "to box"
+  box_width 360
+  box_height 360
+  box_fixed true
+  resize distort
+  name Reformat17
+  xpos -902
+  ypos -390
+ }
+ Transform {
+  translate {0 360}
+  center {180 180}
+  name Transform20
+  xpos -903
+  ypos -336
+ }
+ Read {
+  inputs 0
+  file "\[value path]\[value icon18]"
+  format "360 360 0 0 360 360 1 kakaoEmoticon"
+  origset true
+  premultiplied {{premult}}
+  name icon18
+  xpos -793
+  ypos -470
+ }
+ Reformat {
+  type "to box"
+  box_width 360
+  box_height 360
+  box_fixed true
+  resize distort
+  name Reformat18
+  xpos -793
+  ypos -390
+ }
+ Transform {
+  translate {360 360}
+  center {180 180}
+  name Transform19
+  xpos -793
+  ypos -335
+ }
+ Read {
+  inputs 0
+  file "\[value path]\[value icon19]"
+  format "360 360 0 0 360 360 1 kakaoEmoticon"
+  origset true
+  premultiplied {{premult}}
+  name icon19
+  xpos -679
+  ypos -470
+ }
+ Reformat {
+  type "to box"
+  box_width 360
+  box_height 360
+  box_fixed true
+  resize distort
+  name Reformat19
+  xpos -679
+  ypos -390
+ }
+ Transform {
+  translate {720 360}
+  center {180 180}
+  name Transform18
+  xpos -679
+  ypos -336
+ }
+push 0
+ Read {
+  inputs 0
+  file "\[value path]\[value icon20]"
+  format "360 360 0 0 360 360 1 kakaoEmoticon"
+  origset true
+  premultiplied {{premult}}
+  name icon20
+  xpos -572
+  ypos -470
+ }
+ Reformat {
+  type "to box"
+  box_width 360
+  box_height 360
+  box_fixed true
+  resize distort
+  name Reformat20
+  xpos -572
+  ypos -390
+ }
+ Transform {
+  translate {1080 360}
+  center {180 180}
+  name Transform17
+  xpos -572
+  ypos -338
+ }
+ Read {
+  inputs 0
+  file "\[value path]\[value icon13]"
+  format "360 360 0 0 360 360 1 kakaoEmoticon"
+  origset true
+  premultiplied {{premult}}
+  name icon13
+  xpos -911
+  ypos -678
+ }
+ Reformat {
+  type "to box"
+  box_width 360
+  box_height 360
+  box_fixed true
+  resize distort
+  name Reformat13
+  xpos -911
+  ypos -598
+ }
+ Transform {
+  translate {0 720}
+  center {180 180}
+  name Transform16
+  xpos -911
+  ypos -546
+ }
+ Read {
+  inputs 0
+  file "\[value path]\[value icon14]"
+  format "360 360 0 0 360 360 1 kakaoEmoticon"
+  origset true
+  premultiplied {{premult}}
+  name icon14
+  xpos -801
+  ypos -676
+ }
+ Reformat {
+  type "to box"
+  box_width 360
+  box_height 360
+  box_fixed true
+  resize distort
+  name Reformat14
+  xpos -801
+  ypos -596
+ }
+ Transform {
+  translate {360 720}
+  center {180 180}
+  name Transform15
+  xpos -801
+  ypos -545
+ }
+ Read {
+  inputs 0
+  file "\[value path]\[value icon15]"
+  format "360 360 0 0 360 360 1 kakaoEmoticon"
+  origset true
+  premultiplied {{premult}}
+  name icon15
+  xpos -692
+  ypos -676
+ }
+ Reformat {
+  type "to box"
+  box_width 360
+  box_height 360
+  box_fixed true
+  resize distort
+  name Reformat15
+  xpos -692
+  ypos -596
+ }
+ Transform {
+  translate {720 720}
+  center {180 180}
+  name Transform14
+  xpos -687
+  ypos -546
+ }
+push 0
+ Read {
+  inputs 0
+  file "\[value path]\[value icon16]"
+  format "360 360 0 0 360 360 1 kakaoEmoticon"
+  origset true
+  premultiplied {{premult}}
+  name icon16
+  xpos -583
+  ypos -676
+ }
+ Reformat {
+  type "to box"
+  box_width 360
+  box_height 360
+  box_fixed true
+  resize distort
+  name Reformat16
+  xpos -583
+  ypos -596
+ }
+ Transform {
+  translate {1080 720}
+  center {180 180}
+  name Transform13
+  xpos -580
+  ypos -548
+ }
+ Read {
+  inputs 0
+  file "\[value path]\[value icon09]"
+  format "360 360 0 0 360 360 1 kakaoEmoticon"
+  origset true
+  premultiplied {{premult}}
+  name icon09
+  xpos -914
+  ypos -895
+ }
+ Reformat {
+  type "to box"
+  box_width 360
+  box_height 360
+  box_fixed true
+  resize distort
+  name Reformat9
+  xpos -914
+  ypos -815
+ }
+ Transform {
+  translate {0 1080}
+  center {180 180}
+  name Transform9
+  xpos -914
+  ypos -766
+ }
+ Read {
+  inputs 0
+  file "\[value path]\[value icon10]"
+  format "360 360 0 0 360 360 1 kakaoEmoticon"
+  last 4
+  origlast 4
+  origset true
+  premultiplied {{premult}}
+  name icon10
+  xpos -804
+  ypos -894
+ }
+ Reformat {
+  type "to box"
+  box_width 360
+  box_height 360
+  box_fixed true
+  resize distort
+  name Reformat10
+  xpos -804
+  ypos -814
+ }
+ Transform {
+  translate {360 1080}
+  center {180 180}
+  name Transform10
+  xpos -804
+  ypos -765
+ }
+ Read {
+  inputs 0
+  file "\[value path]\[value icon11]"
+  format "360 360 0 0 360 360 1 kakaoEmoticon"
+  origset true
+  premultiplied {{premult}}
+  name icon11
+  xpos -690
+  ypos -894
+ }
+ Reformat {
+  type "to box"
+  box_width 360
+  box_height 360
+  box_fixed true
+  resize distort
+  name Reformat11
+  xpos -690
+  ypos -814
+ }
+ Transform {
+  translate {720 1080}
+  center {180 180}
+  name Transform11
+  xpos -690
+  ypos -766
+ }
+push 0
+ Read {
+  inputs 0
+  file "\[value path]\[value icon12]"
+  format "360 360 0 0 360 360 1 kakaoEmoticon"
+  origset true
+  premultiplied {{premult}}
+  name icon12
+  xpos -583
+  ypos -894
+ }
+ Reformat {
+  type "to box"
+  box_width 360
+  box_height 360
+  box_fixed true
+  resize distort
+  name Reformat12
+  xpos -583
+  ypos -814
+ }
+ Transform {
+  translate {1080 1080}
+  center {180 180}
+  name Transform12
+  xpos -583
+  ypos -768
+ }
+ Read {
+  inputs 0
+  file "\[value path]\[value icon05]"
+  format "360 360 0 0 360 360 1 kakaoEmoticon"
+  last 4
+  origlast 4
+  origset true
+  premultiplied {{premult}}
+  name icon05
+  xpos -924
+  ypos -1095
+ }
+ Reformat {
+  type "to box"
+  box_width 360
+  box_height 360
+  box_fixed true
+  resize distort
+  name Reformat5
+  xpos -924
+  ypos -1015
+ }
+ Transform {
+  translate {0 1440}
+  center {180 180}
+  name Transform7
+  xpos -924
+  ypos -964
+ }
+ Read {
+  inputs 0
+  file "\[value path]\[value icon06]"
+  format "360 360 0 0 360 360 1 kakaoEmoticon"
+  origset true
+  premultiplied {{premult}}
+  name icon06
+  xpos -813
+  ypos -1095
+ }
+ Reformat {
+  type "to box"
+  box_width 360
+  box_height 360
+  box_fixed true
+  resize distort
+  name Reformat6
+  xpos -813
+  ypos -1015
+ }
+ Transform {
+  translate {360 1440}
+  center {180 180}
+  name Transform6
+  xpos -809
+  ypos -964
+ }
+ Read {
+  inputs 0
+  file "\[value path]\[value icon07]"
+  format "360 360 0 0 360 360 1 kakaoEmoticon"
+  origset true
+  premultiplied {{premult}}
+  name icon07
+  xpos -704
+  ypos -1095
+ }
+ Reformat {
+  type "to box"
+  box_width 360
+  box_height 360
+  box_fixed true
+  resize distort
+  name Reformat7
+  xpos -704
+  ypos -1015
+ }
+ Transform {
+  translate {720 1440}
+  center {180 180}
+  name Transform5
+  xpos -704
+  ypos -964
+ }
+push 0
+ Read {
+  inputs 0
+  file "\[value path]\[value icon08]"
+  format "360 360 0 0 360 360 1 kakaoEmoticon"
+  origset true
+  premultiplied {{premult}}
+  name icon08
+  xpos -594
+  ypos -1095
+ }
+ Reformat {
+  type "to box"
+  box_width 360
+  box_height 360
+  box_fixed true
+  resize distort
+  name Reformat8
+  xpos -594
+  ypos -1015
+ }
+ Transform {
+  translate {1080 1440}
+  center {180 180}
+  name Transform8
+  xpos -594
+  ypos -966
+ }
+ Read {
+  inputs 0
+  file "\[value path]\[value icon01]"
+  format "360 360 0 0 360 360 1 kakaoEmoticon"
+  origset true
+  premultiplied {{premult}}
+  name icon01
+  xpos -919
+  ypos -1361
+ }
+ Reformat {
+  type "to box"
+  box_width 360
+  box_height 360
+  box_fixed true
+  resize distort
+  name Reformat1
+  xpos -919
+  ypos -1281
+ }
+ Transform {
+  translate {0 1800}
+  center {180 180}
+  name Transform4
+  xpos -919
+  ypos -1205
+ }
+ Read {
+  inputs 0
+  file "\[value path]\[value icon02]"
+  format "360 360 0 0 360 360 1 kakaoEmoticon"
+  last 3
+  after loop
+  origlast 3
+  origset true
+  premultiplied {{premult}}
+  name icon02
+  xpos -808
+  ypos -1361
+ }
+ Reformat {
+  type "to box"
+  box_width 360
+  box_height 360
+  box_fixed true
+  resize distort
+  name Reformat2
+  xpos -808
+  ypos -1281
+ }
+ Transform {
+  translate {360 1800}
+  center {180 180}
+  name Transform3
+  xpos -808
+  ypos -1202
+ }
+ Read {
+  inputs 0
+  file "\[value path]\[value icon03]"
+  format "360 360 0 0 360 360 1 kakaoEmoticon"
+  origset true
+  premultiplied {{premult}}
+  name icon03
+  xpos -698
+  ypos -1361
+ }
+ Reformat {
+  type "to box"
+  box_width 360
+  box_height 360
+  box_fixed true
+  resize distort
+  name Reformat3
+  xpos -698
+  ypos -1281
+ }
+ Transform {
+  translate {720 1800}
+  center {180 180}
+  name Transform2
+  xpos -698
+  ypos -1203
+ }
+push 0
+ Read {
+  inputs 0
+  file "\[value path]\[value icon04]"
+  format "360 360 0 0 360 360 1 kakaoEmoticon"
+  origset true
+  premultiplied {{premult}}
+  name icon04
+  xpos -588
+  ypos -1362
+ }
+ Reformat {
+  type "to box"
+  box_width 360
+  box_height 360
+  box_fixed true
+  resize distort
+  name Reformat4
+  xpos -588
+  ypos -1282
+ }
+ Transform {
+  translate {1080 1800}
+  center {180 180}
+  name Transform1
+  xpos -588
+  ypos -1204
+ }
+ Constant {
+  inputs 0
+  channels rgb
+  color 1
+  format "1440 2160 0 0 1440 2160 1 emoticon_bg"
+  name Constant3
+  xpos -152
+  ypos -1402
+ }
+ Constant {
+  inputs 0
+  channels rgb
+  color {0.938685596 0.938685596 0.938685596 0}
+  format "1440 2160 0 0 1440 2160 1 emoticon_bg"
+  name Constant2
+  xpos -246
+  ypos -1403
+ }
+ Constant {
+  inputs 0
+  channels rgb
+  color {0.4286904037 0.5332763195 0.6239602566 0}
+  format "1440 2160 0 0 1440 2160 1 emoticon_bg"
+  name Constant1
+  xpos -340
+  ypos -1405
+ }
+ Switch {
+  inputs 3
+  which {{bgcolor}}
+  name Switch1
+  xpos -246
+  ypos -1304
+ }
+ Merge2 {
+  inputs 5+1
+  name Merge1
+  xpos -246
+  ypos -1132
+ }
+ Merge2 {
+  inputs 5+1
+  name Merge2
+  xpos -246
+  ypos -914
+ }
+ Merge2 {
+  inputs 5+1
+  name Merge3
+  xpos -243
+  ypos -730
+ }
+ Merge2 {
+  inputs 5+1
+  name Merge4
+  xpos -243
+  ypos -486
+ }
+ Merge2 {
+  inputs 5+1
+  name Merge5
+  xpos -238
+  ypos -280
+ }
+ Merge2 {
+  inputs 5+1
+  name Merge6
+  xpos -242
+  ypos -56
+ }
+ Crop {
+  box {0 0 1440 2160}
+  reformat true
+  crop false
+  name Crop1
+  xpos -242
+  ypos -32
+ }
+ Output {
+  name Output1
+  xpos -242
+  ypos 44
+ }
+end_group
